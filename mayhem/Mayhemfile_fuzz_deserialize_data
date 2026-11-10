@@ -1,0 +1,9 @@
+project: savantenvs/CopyQ
+target: fuzz_deserialize_data
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_deserialize_data/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_deserialize_data
+    libfuzzer: true
+    timeout: 30

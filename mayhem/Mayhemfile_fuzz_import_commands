@@ -1,0 +1,9 @@
+project: savantenvs/CopyQ
+target: fuzz_import_commands
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_import_commands/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_import_commands
+    libfuzzer: true
+    timeout: 30
